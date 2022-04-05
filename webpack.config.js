@@ -82,7 +82,8 @@ module.exports = {
                     loader: 'eslint-loader',
                     options: {
                         failOnError: isProduction,
-                        cache: !isProduction
+                        cache: !isProduction,
+                        fix: true
                     }
                 }
             ],

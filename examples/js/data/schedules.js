@@ -16,6 +16,7 @@ function ScheduleInfo() {
     this.title = null;
     this.body = null;
     this.location = null;
+    this.dni = null;
     this.isAllday = false;
     this.start = null;
     this.end = null;
@@ -119,6 +120,7 @@ function generateRandomSchedule(calendar, renderStart, renderEnd) {
 
     schedule.isPrivate = chance.bool({likelihood: 10});
     schedule.location = chance.address();
+    schedule.dni = '3000'
     schedule.attendees = chance.bool({likelihood: 70}) ? generateNames() : [];
     schedule.recurrenceRule = chance.bool({likelihood: 20}) ? 'repeated events' : '';
     schedule.state = chance.bool({likelihood: 20}) ? 'Free' : 'Busy';

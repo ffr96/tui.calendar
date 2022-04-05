@@ -4,5 +4,9 @@
     "globals": {
         "chance": true,
         "moment": true
-    }
+    },
+	"rules":{
+    "linebreak-style": 0   // <----------
+  }
+
 }

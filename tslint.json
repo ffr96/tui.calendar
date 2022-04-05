@@ -5,6 +5,7 @@
       true,
       "single"
     ],
+	"linebreak-style":0,
     "trailing-comma": false,
     "max-classes-per-file": false,
     "no-namespace": false

@@ -193,6 +193,12 @@ function Schedule() {
     this.location = '';
 
     /**
+     * dni
+     * @type {string}
+     */
+    this.dni = '';
+
+    /**
      * attendees
      * @type {Array.<string>}
      */
@@ -282,6 +288,7 @@ Schedule.prototype.init = function(options) {
     this.dueDateClass = options.dueDateClass || '';
     this.customStyle = options.customStyle || '';
     this.location = options.location || '';
+    this.dni = options.dni || '';
     this.attendees = options.attendees || [];
     this.recurrenceRule = options.recurrenceRule || '';
     this.isPrivate = options.isPrivate || false;

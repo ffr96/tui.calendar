@@ -55,7 +55,6 @@
             }
 
             cal.updateSchedule(schedule.id, schedule.calendarId, changes);
-            refreshScheduleVisibility();
         },
         'beforeDeleteSchedule': function(e) {
             console.log('beforeDeleteSchedule', e);
@@ -329,20 +328,6 @@
         refreshScheduleVisibility();
     }
 
-    function refreshScheduleVisibility() {
-        var calendarElements = Array.prototype.slice.call(document.querySelectorAll('#calendarList input'));
-
-        CalendarList.forEach(function(calendar) {
-            cal.toggleSchedules(calendar.id, !calendar.checked, false);
-        });
-
-        cal.render(true);
-
-        calendarElements.forEach(function(input) {
-            var span = input.nextElementSibling;
-            span.style.backgroundColor = input.checked ? span.style.borderColor : 'transparent';
-        });
-    }
 
     function setDropdownCalendarType() {
         var calendarTypeName = document.getElementById('calendarTypeName');

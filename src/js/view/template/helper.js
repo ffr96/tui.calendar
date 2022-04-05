@@ -411,6 +411,10 @@ var helpers = {
         return 'Location';
     },
 
+    'dniPlaceholder-tmpl': function() {
+        return 'DNI';
+    },
+
     'startDatePlaceholder-tmpl': function() {
         return 'Start date';
     },
@@ -436,6 +440,9 @@ var helpers = {
     },
     'popupDetailLocation-tmpl': function(schedule) {
         return schedule.location;
+    },
+    'popupDetailDni-tmpl': function(schedule) {
+        return schedule.dni;
     },
     'popupDetailUser-tmpl': function(schedule) {
         return (schedule.attendees || []).join(', ');

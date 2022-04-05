@@ -314,6 +314,9 @@ Base.prototype.updateSchedule = function(schedule, options) {
     }
 
     this._removeFromMatrix(schedule);
+    if (!util.isUndefined(options.id)) {
+        schedule.set('id', options.id);
+    }
     this._addToMatrix(schedule);
 
     /**

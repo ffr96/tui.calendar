@@ -1,4 +1,4 @@
-// Type definitions for TOAST UI Calendar v1.15.2
+// Type definitions for TOAST UI Calendar v1.15.3
 // TypeScript Version: 3.2.1
 
 export type DateType = string | Date | TZDate;
@@ -45,7 +45,7 @@ export interface IDayGridCreationGuide {
     clearGuideElement: () => void;
 }
 
-export interface IEventWithCreationPopup extends Pick<ISchedule, 'start' | 'end' | 'state' | 'title' | 'location'> {
+export interface IEventWithCreationPopup extends Pick<ISchedule, 'start' | 'end' | 'state' | 'title' | 'location' | 'dni'> {
     calendarId: string | number | null;
     useCreationPopup: true;
     isAllDay: boolean;
@@ -258,6 +258,7 @@ export interface ISchedule {
     category?: string;
     dueDateClass?: string;
     location?: string;
+    dni?: string;
     attendees?: string[];
     recurrenceRule?: string;
     isPending?: boolean;
